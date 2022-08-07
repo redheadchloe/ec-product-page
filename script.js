@@ -20,7 +20,7 @@ cartBtn.addEventListener('click', () => {
     cart.classList.toggle('active');
     if (cart.classList.contains('active')) {
         document.addEventListener('click', (e) => {
-            if (e.target !== cartBtn) {
+            if (e.target !== cartBtn !e.target.classList.contains('delete')) {
                 cart.classList.remove('active');
             }
 
