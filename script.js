@@ -167,7 +167,6 @@ window.addEventListener('load', () => {
         JSON.parse(localStorage.getItem('cart')) || [];
 
         if (e.target.classList.contains('plus') || e.target.classList.contains('atc-btn')) {
-            console.log(cart);
             quan.value++;
 
             cartBtn.classList.add('active');
