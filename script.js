@@ -124,10 +124,7 @@ thumbAll.addEventListener('click', e => {
     product.src = products[current].images;
     e.target.classList.add('active')
 })
-// click on the thumbnail;
-// change the picture to the one being clicked according to their index in the array;
-// click on the prev/next btn
-// change the picture to -1/+1 according to their index in the array
+
 
 
 
@@ -167,13 +164,12 @@ window.addEventListener('load', () => {
 
 
     atc.addEventListener('click', (e) => {
-        // JSON.parse(localStorage.getItem('cart')) || [];
+        JSON.parse(localStorage.getItem('cart')) || [];
 
         if (e.target.classList.contains('plus') || e.target.classList.contains('atc-btn')) {
             console.log(cart);
             quan.value++;
-            // how to add quantity based on local storage value and not from scratch
-            // cart.quantity++;
+
             cartBtn.classList.add('active');
             cartBtn.dataset.content = quan.value;
 
@@ -211,7 +207,6 @@ window.addEventListener('load', () => {
 
         const cart = {
             quantity: quan.value,
-            // how to dynamically store the price??
             unitPrice: '$125',
             totalPrice: '$' + quan.value * '125',
         }
@@ -224,7 +219,6 @@ window.addEventListener('load', () => {
     // add dlt btn functionality
     cartInfo.addEventListener('click', () => {
         JSON.parse(localStorage.getItem('cart')) || [];
-        // console.log(cart.quantity);
         if (cart.quantity > 1) {
             cart.quantity--;
             cartBtn.dataset.content = cart.quantity;
