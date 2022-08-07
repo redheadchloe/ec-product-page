@@ -181,7 +181,7 @@ window.addEventListener('load', () => {
                 cartBtn.dataset.content = '';
             }
         }
-        quan.addEventListener('change', () => {
+        quan.addEventListener('input', () => {
             if (quan.value > 0) {
                 cartBtn.classList.add('active');
                 cartBtn.dataset.content = quan.value;
